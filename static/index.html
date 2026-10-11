@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Command Center</title>
+  <link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body>
+  <header class="top">
+    <div class="brand">
+      <span class="mark">CC</span>
+      <div>
+        <h1>Command Center</h1>
+        <p class="muted" id="household-label">Personal finances</p>
+      </div>
+    </div>
+    <nav class="tabs" id="tabs">
+      <button data-tab="command" class="active">Command</button>
+      <button data-tab="calendar">Calendar</button>
+      <button data-tab="accounts">Accounts</button>
+      <button data-tab="bills">Bills</button>
+      <button data-tab="debts">Debts</button>
+      <button data-tab="budget">Budget</button>
+      <button data-tab="strategy" id="tab-btn-strategy">Strategy</button>
+    </nav>
+    <div class="top-actions">
+      <label class="buffer">
+        Buffer
+        <input id="buffer" type="number" min="0" step="50" />
+      </label>
+      <button id="save-settings" class="ghost">Save</button>
+    </div>
+  </header>
+
+  <main>
+    <section id="tab-command" class="panel active"></section>
+    <section id="tab-calendar" class="panel"></section>
+    <section id="tab-accounts" class="panel"></section>
+    <section id="tab-bills" class="panel"></section>
+    <section id="tab-debts" class="panel"></section>
+    <section id="tab-budget" class="panel"></section>
+    <section id="tab-strategy" class="panel"></section>
+  </main>
+
+  <div id="modal" class="modal hidden" role="dialog">
+    <div class="modal-card">
+      <header>
+        <h2 id="modal-title">Edit</h2>
+        <button class="ghost" id="modal-close">Close</button>
+      </header>
+      <form id="modal-form"></form>
+    </div>
+  </div>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>

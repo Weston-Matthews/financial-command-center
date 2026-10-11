@@ -1,0 +1,17 @@
+[project]
+name = "finance-command-center"
+version = "0.1.0"
+description = "Local cash-flow command center: accounts, bills calendar, projected balance, leftover budget"
+readme = "README.md"
+requires-python = ">=3.10,<4.0"
+dependencies = [
+    "fastapi>=0.115.0",
+    "uvicorn[standard]>=0.32.0",
+]
+
+[build-system]
+requires = ["poetry-core>=2.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+package-mode = false
